@@ -4,6 +4,17 @@ body {
   margin: 0 10%;
   color: rgb(68, 69, 70);
 }
+button {
+  background-color:rgb(82, 22, 28);
+  border: none;
+  border-radius: 20px;
+  color: rgb(255,255,255);
+  cursor: pointer;
+  height: 40px;
+  margin: 33px 20px;
+  text-transform: uppercase;
+  width: 300px;
+}
 h1, h2, h3 {
   font-weight: normal;
   color: rgb(29, 41, 63);
@@ -23,4 +34,12 @@ h4 {
   font-weight: bold;
   font-size: 1.2rem;
   color: rgb(82, 22, 28);
+}
+#buttons {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+#intro {
+  margin-bottom: 67px;
 }

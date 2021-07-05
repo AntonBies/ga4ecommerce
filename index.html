@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="style.css">
   <title>ga4 ecommerce datalayer</title>
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -10,18 +11,34 @@
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-W8FS5F5');</script>
+  <script type="text/javascript" src="ecommerce.js" defer></script>
 </head>
 <body>
   <main>
-    <h1>GA4 ecommerce datalayer testing page</h1>
-    <p>The buttons below will provide ecommerce datalayer pushes following ga4 developer documentation. To play around with this, locally add a GTM container to this site and fire your tags on the datalayer events.</p>
-    <p>This was created to practice:</p>
-    <ol>
-      <li>Firing ga4 ecommerce tags</li>
-      <li>Firing ga3 ecommerce tags based on the ga4 ecommerce datalayer</li>
-    </ol>
-    <section>
-      <button id="viewPromotion">VIEW_PROMOTION</button>
+    <section id="intro">
+      <h1>GA4 ecommerce datalayer testing page</h1>
+      <p>The buttons below will provide ecommerce datalayer pushes following ga4 developer documentation. To play around with this, locally add a GTM container to this site and fire your tags on the datalayer events.</p>
+      <p>This was created to practice:</p>
+      <ol>
+        <li>Firing ga4 ecommerce tags</li>
+        <li>Firing ga3 ecommerce tags based on the ga4 ecommerce datalayer</li>
+      </ol>
+    </section>
+    <h2>Ecommerce pushes</h2>
+    <section id="buttons">
+      <button id="viewPromotion">view_promotion</button>
+      <button id="selectPromotion">select_promotion</button>
+      <button id="viewItemList">view_item_list</button>
+      <button id="selectItem">select_item</button>
+      <button id="viewItem">view_item</button>
+      <button id="addToCart">add_to_cart</button>
+      <button id="addToWishlist">add_to_wishlist</button>
+      <button id="removeFromCart">remove_from_cart</button>
+      <button id="viewCart">view_cart</button>
+      <button id="beginCheckout">begin_checkout</button>
+      <button id="addShippingInfo">add_shipping_info</button>
+      <button id="addPaymentInfo">add_payment_info</button>
+      <button id="purchase">purchase</button>
     </section>
   </main>
 </body>
