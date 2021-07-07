@@ -108,6 +108,9 @@ for (let item of buttons) {
           cartItems = [];
         }
       }
+      if (e.target.dataset.event === 'ecommerce_purchase') {
+        cartItems = [];
+      }
     }
   });
 }
