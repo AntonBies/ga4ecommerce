@@ -87,11 +87,12 @@ const buildEcommerceObject = (e) => {
 const buttons = document.getElementsByTagName('button');
 for (let item of buttons) {
   item.addEventListener('click', function(e) {
-    if (e.target.dataset.event) {
+    let ecommerceObj = buildEcommerceObject(e);
+    if (e.target.dataset.event && ecommerceObj && ecommerceObj.items && ecommerceObj.items.length) {
       window.dataLayer.push({ecommerce: null});
       window.dataLayer.push({
         event: e.target.dataset.event,
-        ecommerce: buildEcommerceObject(e)
+        ecommerce: ecommerceObj
       });
       if (e.target.dataset.event === 'ecommerce_add_to_cart') {
         if (!cartItems[0]) {
