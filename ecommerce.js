@@ -66,8 +66,17 @@ const buildEcommerceObject = (e) => {
     ['ecommerce_remove_from_cart', {items: [getProducts(e)[0]]}],
     ['ecommerce_begin_checkout', {items: cartItems}],
     ['ecommerce_add_shipping_info', {items: cartItems, shipping_tier: 'download'}],
-    ['ecommerce_add_payment_info', {items: cartItems, payment_type: 'ideal'}]
-  ]
+    ['ecommerce_add_payment_info', {items: cartItems, payment_type: 'ideal'}],
+    ['ecommerce_purchase', {
+      items: cartItems, 
+      currency: 'EUR', 
+      value: cartItems[0] ? cartItems[0].price * cartItems[0].quantity : 0, 
+      tax: cartItems[0] ? cartItems[0].price * cartItems[0].quantity * 0.21 : 0,
+      shipping: 0,
+      transaction_id: new Date().getTime()
+    }]
+  ];
+
   for (var i = 0, len = table.length; i < len; i += 1) {
     if (table[i][0] === e.target.dataset.event) {
       return table[i][1];
@@ -80,7 +89,7 @@ for (let item of buttons) {
   item.addEventListener('click', function(e) {
     if (e.target.dataset.event) {
       window.dataLayer.push({ecommerce: null});
-      console.log({
+      window.dataLayer.push({
         event: e.target.dataset.event,
         ecommerce: buildEcommerceObject(e)
       });
