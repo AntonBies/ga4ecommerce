@@ -16,7 +16,7 @@ const getProducts = (e) => {
   const baseProducts = [{
     item_name: 'naked statistics - charles wheelan',
     item_id: 'wheelan-nakedstatistics',
-    price: 15,
+    price: Number(15).toFixed(2),
     item_brand: 'ww norton',
     item_category: 'books',
     item_category2: 'non-fiction',
@@ -27,7 +27,7 @@ const getProducts = (e) => {
   }, {
     item_name: 'the signal and the noise - nate silver',
     item_id: 'silver-thesignalandthenoise',
-    price: 20,
+    price: Number(20).toFixed(2),
     item_brand: 'penguin',
     item_category: 'books',
     item_category2: 'non-fiction',
