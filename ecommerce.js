@@ -4,14 +4,12 @@ const promotions = [{
   promotion_id: 'summer2021',
   promotion_name: 'summer_promo_21',
   creative_name: 'reading_by_the_pool',
-  creative_slot: '1',
-  location_id: 'hero_banner'
+  creative_slot: 'hero_banner_1',
 }, {
   promotion_id: 'summer2021',
   promotion_name: 'summer_promo_21',
   creative_name: 'reading_on_a_mountain',
-  creative_slot: '2',
-  location_id: 'promo_block_bottom'
+  creative_slot: 'hero_banner_2',
 }];
 
 const getProducts = (e) => {
