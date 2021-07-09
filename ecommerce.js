@@ -23,6 +23,7 @@ const getProducts = (e) => {
     item_category3: 'science',
     item_category4: 'statistics',
     item_variant: 'ebook',
+    item_type: 'epub',
     quantity: 1
   }, {
     item_name: 'the signal and the noise - nate silver',
@@ -34,6 +35,7 @@ const getProducts = (e) => {
     item_category3: 'science',
     item_category4: 'statistics',
     item_variant: 'ebook',
+    item_type: 'epub',
     quantity: 1
   }];
 
