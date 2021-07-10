@@ -106,10 +106,15 @@ for (let item of buttons) {
           cartItems[0].quantity -= 1;
         } else {
           cartItems = [];
+          document.getElementById('cart').innerText = '0';
         }
       }
       if (e.target.dataset.event === 'ecommerce_purchase') {
         cartItems = [];
+        document.getElementById('cart').innerText = '0';
+      }
+      if (cartItems.length) {
+        document.getElementById('cart').innerText = cartItems[0].quantity;
       }
     }
   });
