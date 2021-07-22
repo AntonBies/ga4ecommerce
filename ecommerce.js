@@ -84,6 +84,8 @@ const buildEcommerceObject = (e) => {
   }
 }
 
+window.dataLayer = window.dataLayer || [];
+
 const buttons = document.getElementsByTagName('button');
 for (let item of buttons) {
   item.addEventListener('click', function(e) {
